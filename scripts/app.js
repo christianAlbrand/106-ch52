@@ -21,7 +21,7 @@ function saveTask(){
     const budget = $("#numBudget").val();
     let taskToSave = new task(title, desc, color, date, status, budget)
     console.log(taskToSave)
-    displayTask(taskToSave);
+    // displayTask(taskToSave);
 
     // save to server (POST)
 
@@ -96,7 +96,7 @@ function loadTask(){
 
 function testRequest(){
     $.ajax({
-        type: "GET",
+        type: "get",
         url: "http://fsdiapi.azurewebsites.net",
         success: function(response){
             console.log(response);
